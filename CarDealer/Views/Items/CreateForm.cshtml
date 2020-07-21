@@ -1,5 +1,26 @@
-<form action="/items" method="post">
-  <label for="description">Add a new item</label>
-  <input id="description" name="description" type="text">
-  <button type="submit">Submit</button>
-</form>
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Exchanger</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <form action="/items" method="post">
+        <label for="description">What kind of car would you like to sell?</label>
+        <input id="description" name="description" type="text">
+        <label for="miles">How many miles does this vehicle have?</label>
+        <input id="miles" name="miles" type="number">
+        <label for="accident">Has this car been in an accident?</label>
+        <input id="accident" name="accident" type="bool">
+        <label for="price">What is your asking price?</label>
+        <input id="price" name="price" type="number">
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

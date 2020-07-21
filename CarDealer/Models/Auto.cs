@@ -4,22 +4,30 @@ namespace CarDealer.Models
 {
   public class Item
   {
-    public string Description { get; set; }
+
+    private string _description { get; set; }
+    private int _miles { get; set; }
+    private bool _accident { get; set; }
+    private int _price { get; set; }
+    
 
     private static List<Item> _instances = new List<Item> {};
 
-    public int Priority { get; set; } = 1;
+    // public int Priority { get; set; } = 1;
 
-    public Item(string description)
+    public Item(string description, int miles, bool accident, int price)
     {
-      Description = description;
+      _description = description;
+      _miles = miles;
+      _accident = accident;
+      _price = price;
       _instances.Add(this);
     }
 
-    public Item(string description, int priority): this(description)
-    {
-      Priority = priority;
-    }
+    // public Item(string description, int priority): this(description)
+    // {
+    //   Priority = priority;
+    // }
     public static List<Item> GetAll()
     {
       return _instances;
